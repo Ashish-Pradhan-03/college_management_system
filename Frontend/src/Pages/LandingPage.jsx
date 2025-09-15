@@ -1,43 +1,46 @@
-import React from 'react'
-import MyLogo from '../assets/LandingPage2.png';
+import React from "react";
+import MyLogo from "../assets/LandingPage3.png";
 
 function LandingPage() {
   return (
-    <>
-      <section className="w-full min-h-screen flex items-center justify-center bg-[#FDFAF5] text-[18px] md:text-[20px]">
-        <div className="max-w-[1380px] w-full min-h-screen px-4 flex flex-col md:flex-row">
+    <section className="w-full min-h-screen flex items-center justify-center bg-[#F9F6F0] text-gray-800 font-serif">
+      <div className="w-full max-w-[1380px] h-[100vh] px-6 py-12 flex flex-col md:flex-row items-center gap-12">
+        
+        {/* Left Image */}
+        <div className="md:w-1/2 w-full flex justify-left">
+          <img
+            src={MyLogo}
+            alt="College Management"
+            className="w-full max-w-xl md:max-w-[40rem] object-contain"
+          />
+        </div>
 
-          <div className="md:w-1/2 w-full flex items-center justify-left  mt-8 md:mt-0">
-            <img src={MyLogo} alt="College Management" className="max-w-[550px] w-full h-auto" />
-          </div>
+        {/* Right Content */}
+        <div className="md:w-1/2 w-full text-left">
+          <h1 className="text-3xl md:text-6xl leading-tight font-serif">
+            College Management System
+          </h1>
 
+          <p className="mt-4 text-base md:text-lg text-gray-600 max-w-[480px] font-serif">
+            Streamline College Management, class Organization, and add student and faculty. Seamlessly track attendance, assess performance, and provide feedback. Access records, view Marks, and communicate effortlessly.
+          </p>
 
-          <div className="md:w-1/2 w-full flex items-center py-8 mt-8 md:mt-0">
-            <div className="w-full">
+          <div className="mt-6 flex flex-col items-center md:items-start gap-4">
+            <button className="bg-purple-600 hover:bg-purple-700 text-white cursor-pointer px-6 py-2 rounded-lg text-base md:text-lg transition">
+              Login
+            </button>
 
-              <h1 className='text-[2.5rem] md:text-[3.5rem] font-poppins leading-[2.75rem] md:leading-[3.5rem]'>College Management System</h1>
-
-              <p className='text-[1rem] md:text-[1.125rem] mt-6 font-system'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, dolore qui explicabo consequatur dicta fugit corrupti repellat perferendis facilis incidunt culpa asperiores sit repudiandae velit!</p>
-
-
-              <div className="mt-6 flex justify-center font-system">
-                <button className='bg-purple-500 rounded-[8px]  text-white px-6 py-2 text-[1rem] md:text-[1.125rem] cursor-pointer hover:bg-purple-600'>login</button>
-              </div>
-
-              <div className="mt-6 flex justify-center font-system">
-                <p className='text-[1rem] md:text-[1.125rem] mt-3 '>
-                  Having login issues? <a href="" className='text-purple-500 underline'>Contact Support</a>
-                </p>
-              </div>
-
-
-              
-            </div>
+            <p className="text-sm md:text-base text-gray-500">
+              Having login issues?{" "}
+              <a href="#" className="text-purple-600 underline cursor-pointer">
+                Contact Support
+              </a>
+            </p>
           </div>
         </div>
-      </section>
-    </>
-  )
+      </div>
+    </section>
+  );
 }
 
-export default LandingPage
+export default LandingPage;
