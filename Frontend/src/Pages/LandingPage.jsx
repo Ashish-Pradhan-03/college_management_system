@@ -1,5 +1,6 @@
 import React from "react";
 import MyLogo from "../assets/LandingPage3.png";
+import { Link } from "react-router-dom";  // ⬅️ Import Link
 
 function LandingPage() {
   return (
@@ -26,9 +27,13 @@ function LandingPage() {
           </p>
 
           <div className="mt-6 flex flex-col items-center md:items-start gap-4">
-            <button className="bg-purple-600 hover:bg-purple-700 text-white cursor-pointer px-6 py-2 rounded-lg text-base md:text-lg transition">
+            {/* Use Link instead of button */}
+            <Link
+              to="/login"
+              className="bg-purple-600 hover:bg-purple-700 text-white cursor-pointer px-6 py-2 rounded-lg text-base md:text-lg transition"
+            >
               Login
-            </button>
+            </Link>
 
             <p className="text-sm md:text-base text-gray-500">
               Having login issues?{" "}
